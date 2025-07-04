@@ -1,0 +1,7 @@
+name: ${ENV_PROJECT_NAME}
+
+services:
+  gpt-api:
+    extends:
+      service: gpt-api
+      file: gpt-api/docker-compose.yml

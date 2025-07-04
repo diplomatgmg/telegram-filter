@@ -1,0 +1,7 @@
+[project]
+name = "gpt-api"
+dynamic = ["version"]
+dependencies = [
+    "g4f>=0.5.6.3",
+    "pydantic-settings>=2.10.1",
+]

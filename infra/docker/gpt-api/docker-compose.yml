@@ -1,0 +1,20 @@
+services:
+  gpt-api:
+    container_name: gpt-api
+    build:
+      context: ${PROJECT_ROOT}
+      dockerfile: infra/docker/gpt-api/Dockerfile
+      target: ${ENV_MODE}
+    env_file: ${PROJECT_ROOT}/infra/.env
+#    volumes:
+#      - ${PROJECT_ROOT}/services/gpt-api:/app/services/gpt-api
+#      - ${PROJECT_ROOT}/libs:/app/libs
+#    networks:
+#      - app-network
+#    healthcheck:
+#      test: [ "CMD", "wget", "-q", "--spider", "http://gpt-api:${ENV_SERVICE_INTERNAL_PORT}/health" ]
+#      interval: 60s
+#      timeout: 10s
+#      retries: 3
+#      start_period: 3s
+#      start_interval: 1s

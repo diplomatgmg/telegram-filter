@@ -1,0 +1,7 @@
+[project]
+name = "logger-lib"
+dynamic = ["version"]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
